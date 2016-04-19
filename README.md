@@ -4,7 +4,7 @@ Arlin Front-end Development by Michi
 Introduction
 ------------
 
-> Front-end layer for Arlin.
+> Frontend app layer for Arlin.
 
 Getting Started
 ---------------
@@ -19,7 +19,7 @@ Getting Started
 
 ### Required Installation
 
-+ Install Node.js from your prefered way, or from http://nodejs.org
++ Install Node.js from your preferred way, or from http://nodejs.org
   + It's also recommended to [use Node Version Manager (nvm)](https://github.com/creationix/nvm)
 + Install required npm packages/modules with `npm install` within this repo
 
@@ -42,9 +42,30 @@ Getting Started
 + Push to the branch (`git push origin feature-name`)
 + Create new Pull Request
 
-### Deployment
+### Usage, Testing, and Deployment
 
-+ [WIP]
+Start the app with `npm start` or use `npm run <script>` for below:
+
+```
+start: Start the app with Webpack
+build: Build the bundled app
+test: Test the app using <test-runner>
+deploy:development:setup: Setup the development
+deploy:development: Deploy to development
+deploy:staging:setup: Setup the staging
+deploy:staging: Deploy to staging
+deploy:production:setup: Setup the production
+deploy:production: Deploy to production
+```
+
+*  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *
+
+References
+----------
+
++ http://vuejs.org
+
+*  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *
 
 License
 -------

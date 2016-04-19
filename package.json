@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "webpack-dev-server --inline --hot",
+    "build": "echo 'Bundling will be specified later'",
     "test": "echo 'Test suite will be specified later'"
   },
   "homepage": "http://arlin.link",
@@ -49,7 +50,7 @@
     "arlin",
     "michi",
     "frontend",
-    "javascript"
+    "javascript",
     "nodejs",
     "vuejs"
   ],
