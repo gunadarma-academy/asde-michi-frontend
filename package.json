@@ -1,12 +1,21 @@
 {
-  "name": "vue-jwt-auth-example",
-  "version": "1.0.0",
-  "description": "An of how to do JWT Authentication with Vue.js",
+  "name": "arlin-frontend",
+  "version": "0.1.0",
+  "description": "Arlin frontend app layer",
+  "main": "src/index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot"
+    "start": "npm run dev",
+    "dev": "webpack-dev-server --inline --hot",
+    "test": "echo 'Test suite will be specified later'"
   },
-  "author": "ryanchenkie",
-  "license": "MIT",
+  "homepage": "http://arlin.link",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/gunadarma-academy/asde-michi-frontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gunadarma-academy/asde-michi-frontend/issues"
+  },
   "devDependencies": {
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
@@ -27,5 +36,22 @@
     "vue-resource": "^0.1.17",
     "vue-router": "^0.7.5",
     "vue": "^1.0.7"
-  }
+  },
+  "author": "Arlin <admin@arlin.link>",
+  "contributors": [
+    "Ekky Pramana <ekkypramana@gmail.com>",
+    "M Haidar Hanif <me@mhaidarhanif.com>"
+  ],
+  "engines": {
+    "node": ">= 4.4.0"
+  },
+  "keywords": [
+    "arlin",
+    "michi",
+    "frontend",
+    "javascript"
+    "nodejs",
+    "vuejs"
+  ],
+  "license": "MIT"
 }
