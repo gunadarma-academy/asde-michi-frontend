@@ -1,7 +1,7 @@
 {
   "name": "arlin-frontend",
-  "version": "0.1.0",
-  "description": "Arlin frontend app layer",
+  "version": "0.2.0",
+  "description": "Arlin frontend application by Michi",
   "main": "src/index.js",
   "scripts": {
     "start": "npm run dev",
@@ -45,9 +45,6 @@
     "Ekky Pramana <ekkypramana@gmail.com>",
     "M Haidar Hanif <me@mhaidarhanif.com>"
   ],
-  "engines": {
-    "node": ">= 4.4.0"
-  },
   "keywords": [
     "arlin",
     "michi",
@@ -56,5 +53,8 @@
     "nodejs",
     "vuejs"
   ],
+  "engines": {
+    "node": ">= 4.4.0"
+  },
   "license": "MIT"
 }
