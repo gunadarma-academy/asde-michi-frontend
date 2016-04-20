@@ -1,11 +1,7 @@
 // src/auth/index.js
 
 import {router} from '../index'
-
-// URL and endpoint constants
-const API_URL = 'http://localhost:8000/'
-const SIGNIN_URL = API_URL + 'auth/local/'
-const SIGNUP_URL = API_URL + 'signup/'
+import env from '../environments'
 
 export default {
 
@@ -17,7 +13,7 @@ export default {
 
   // Send a request to the signin URL and save the returned JWT
   signin(context, creds, redirect) {
-    context.$http.post(SIGNIN_URL, creds, (data) => {
+    context.$http.post(env.SIGNIN_URL, creds, (data) => {
       localStorage.setItem('id_token', data.id_token)
 
       this.user.authenticated = true
@@ -36,7 +32,7 @@ export default {
   },
 
   signup(context, creds, redirect) {
-    context.$http.post(SIGNUP_URL, creds, (data) => {
+    context.$http.post(env.SIGNUP_URL, creds, (data) => {
       localStorage.setItem('id_token', data.id_token)
 
       this.user.authenticated = true

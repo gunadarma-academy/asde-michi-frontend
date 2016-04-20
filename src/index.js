@@ -8,6 +8,7 @@ import Signup from './components/Signup.vue'
 import Signin from './components/Signin.vue'
 import SecretQuote from './components/SecretQuote.vue'
 import auth from './auth'
+import env from './environments'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 
@@ -32,7 +33,7 @@ router.map({
   '/landing': {
     component: Landing
   },
-  'secretquote': {
+  '/secretquote': {
     component: SecretQuote
   },
   '/signin': {
