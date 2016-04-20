@@ -1,29 +1,41 @@
 <!-- src/components/Signup.vue -->
 
  <template>
-   <div class="col-sm-4 col-sm-offset-4">
-     <h2>Signup </h2>
-     <p>Sign in to your account to get some great quotes.</p>
-     <div class="alert alert-danger" v-if="error">
-       <p>{{ error }}</p>
+   <div class="mdl-grid">
+     <div class="box mdl-cell mdl-cell--6-col mdl-cell--3-offset-desktop mdl-card-login mdl-card mdl-shadow--2dp">
+       <br>
+       <img src="/assets/account_logo_dark.svg"/>
+       <p>Daftar untuk berinteraksi dengan Teman Arlin.</p>
+       <div>
+         <form action="#">
+           <div class="mdl-textfield mdl-js-textfield">
+             <input class="mdl-textfield__input" type="text"
+             class="form-control"
+             placeholder="Username"
+             v-model="credentials.username">
+             <label class="mdl-textfield__label"></label>
+           </div>
+         </form>
+         <form action="#">
+           <div class="mdl-textfield mdl-js-textfield">
+             <input class="mdl-textfield__input" type="password"
+             class="form-control"
+             placeholder="Password"
+             v-model="credentials.password">
+             <label class="mdl-textfield__label"></label>
+           </div>
+         </form>
+         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+         @click="submit()">
+           <a class="mdl-navigation__link" v-link="'signin'">DAFTAR</a>
+         </button>
+       </div>
+       <div class="alert alert-danger" v-if="error">
+         <p>{{ error }}</p>
+       </div>
+      <br>
+      <br>
      </div>
-     <div class="form-group">
-       <input
-         type="text"
-         class="form-control"
-         placeholder="Enter your username"
-         v-model="credentials.username"
-       >
-     </div>
-     <div class="form-group">
-       <input
-         type="password"
-         class="form-control"
-         placeholder="Enter your password"
-         v-model="credentials.password"
-       >
-     </div>
-     <button class="btn btn-primary" @click="submit()">Access</button>
    </div>
  </template>
 
