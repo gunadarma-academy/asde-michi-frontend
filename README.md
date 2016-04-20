@@ -1,6 +1,8 @@
 Arlin Front-end Development by Michi
 =========================
 
+![Codeship](https://codeship.com/projects/bbcc6840-e8de-0133-344f-226489e381a7/status?branch=master)
+
 Introduction
 ------------
 
