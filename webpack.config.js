@@ -1,4 +1,4 @@
-// webpack.config.js
+// Original webpack.config.js
 
 module.exports = {
   // the main entry of our app
@@ -8,11 +8,11 @@ module.exports = {
   ],
   // output configuration
   output: {
-    path: __dirname + '/build/',
-    publicPath: 'build/',
-    filename: 'build.js'
+    path: __dirname + '/dist/',
+    publicPath: 'dist/',
+    filename: 'bundle.js'
   },
-
+  // module
   module: {
     loaders: [
       // process *.vue files using vue-loader
@@ -30,7 +30,6 @@ module.exports = {
       }
     ]
   },
-
   babel: {
     presets: ['es2015'],
     plugins: ['transform-runtime']

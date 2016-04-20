@@ -21,7 +21,7 @@ export default {
   methods: {
     getQuote() {
       this.$http
-        .get('http://localhost:3001/api/protected/random-quote', (data) => {
+        .get('http://localhost:8000/api/protected/random-quote', (data) => {
           this.quote = data;
         }, {
           // Attach the JWT header

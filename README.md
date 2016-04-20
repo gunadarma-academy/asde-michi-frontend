@@ -8,6 +8,8 @@ Introduction
 
 > Frontend app layer for Arlin.
 
+Default host and port = `localhost:8000`
+
 Getting Started
 ---------------
 
