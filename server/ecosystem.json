@@ -14,15 +14,15 @@
       },
       env_dev: {
         NODE_ENV: "dev",
-        PORT: "3000"
+        PORT: "3030"
       },
       env_staging: {
         NODE_ENV: "staging",
-        PORT: "3000"
+        PORT: "3030"
       },
       env_production: {
         NODE_ENV: "production",
-        PORT: "3000"
+        PORT: "3030"
       }
     }
   ],
