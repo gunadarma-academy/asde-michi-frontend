@@ -1,15 +1,17 @@
 <template>
-  <div class="jumbotron">
-      <div class="row text-center">
-        <div class="col-sm-6 col-sm-offset-3">
-          <h1>Arlin</h1>
-          <h3>Ke sana ke mari, tanya di sini.</h3>
-          <button class="btn btn-secondary"><a v-link="'signin'">Login</a></button>
-          <h5><a v-link="'signup'">Atau daftar sekarang.</a></h5>
-        </div>
-      </div>
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--3-offset-desktop" style="margin-top:170px; text-align:center;">
+      <img src="/assets/arlin_logo_color.svg" style="width: 60%;"/>
+      <h5 style="">Ke sana ke mari, tanya di sini.</h5>
+      <br>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+        <a class="mdl-navigation__link" v-link="'signin'" style="color:white;">MASUK</a>
+      </button>
+      <p><a href="#">Atau daftar sekarang</a></p>
+    </div>
   </div>
- </template>
+</template>
+
 
  <script>
  </script>
