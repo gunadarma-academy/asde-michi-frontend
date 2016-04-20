@@ -2,10 +2,11 @@
 
  <template>
    <div class="mdl-grid">
-     <div class="box mdl-cell mdl-cell--6-col mdl-cell--3-offset-desktop">
-       <h2>Masuk</h2>
+     <div class="box mdl-cell mdl-cell--6-col mdl-cell--3-offset-desktop mdl-card-login mdl-card mdl-shadow--2dp">
+       <br>
+       <img src="/assets/account_logo_dark.svg"/>
        <p>Masuk untuk berinteraksi dengan Teman Arlin.</p>
-       <div class="mdl-card-login mdl-card mdl-shadow--2dp">
+       <div>
          <form action="#">
            <div class="mdl-textfield mdl-js-textfield">
              <input class="mdl-textfield__input" type="text"
@@ -32,13 +33,15 @@
        <div class="alert alert-danger" v-if="error">
          <p>{{ error }}</p>
        </div>
+      <br>
+      <br>
      </div>
    </div>
  </template>
 
  <style>
    .box {
-     margin-top:170px;
+     margin-top:140px;
      text-align: center;
    }
 
@@ -46,7 +49,7 @@
      display: grid;
    }
 
-   .mdl-card > .mdl-button a {
+   .mdl-button a {
      color: white;
    }
 
