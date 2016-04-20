@@ -1,7 +1,7 @@
-Arlin Front-end Development by Michi
-=========================
+Arlin Frontend
+==============
 
-![Codeship](https://codeship.com/projects/bbcc6840-e8de-0133-344f-226489e381a7/status?branch=master)
+[![Snap CI Build Status](https://snap-ci.com/gunadarma-academy/asde-michi-frontend/branch/master/build_image)](https://snap-ci.com/gunadarma-academy/asde-michi-frontend/branch/master)
 
 Introduction
 ------------
@@ -19,38 +19,22 @@ Getting Started
 + Modern web browser (Google Chrome or Firefox)
 + Node.js
 
-### Required Installation
+### Installation
 
 + Install Node.js from your preferred way, or from http://nodejs.org
   + It's also recommended to [use Node Version Manager (nvm)](https://github.com/creationix/nvm)
 + Install required npm packages/modules with `npm install` within this repo
-
-### Running
-
-+ Install gulp and live-server globally (`npm install -g gulp live-server`)
-+ Build the defaults assets first (`npm run-script build`)
-+ Open `index.html` or any available HTML files via browser through shown host:port.
-
-### Development
-
-+ Fork the repository
-+ Create your feature branch (`git checkout -b feature-name`)
-+ When needed, clean up the `dist` (`npm run-script clean`)
-+ Make your changes
-+ Watch the changed assets (`npm run-script watch`)
-+ Use `live-server` to live reload the page and assets.
-+ Access `localhost:8080` or shown host:port in the prompt to view
-+ Commit your changes (`git commit -a`)
-+ Push to the branch (`git push origin feature-name`)
-+ Create new Pull Request
++ Install and update required CLI globally to make sure:
+  + `npm install -g pm2 jshint mocha webpack webpack-dev-server`)
 
 ### Usage, Testing, and Deployment
 
 Start the app with `npm start` or use `npm run <script>` for below:
 
 ```
-start: Start the app with Webpack
-build: Build the bundled app
+start: Start the app with configured starter
+dev: Watch the bundled app with Webpack
+build: Build the bundled app with Webpack
 test: Test the app using <test-runner>
 deploy:development:setup: Setup the development
 deploy:development: Deploy to development
@@ -60,12 +44,31 @@ deploy:production:setup: Setup the production
 deploy:production: Deploy to production
 ```
 
+Open the app via browser through shown `{host}:{port}`.
+
+Access `http://{host}:{port}/{route}` or that already shown in the prompt to view. Read the complete [routes available here](https://github.com/gunadarma-academy/asde-michi/blob/master/docs/ROUTES.markdown).
+
+_NOTES:_
+
+Notice that for deployment, you should have a proper access to the server. It's recommended to use SSH key that is already added/registered there. You might want to use `ssh-copy-id username@xx.xx.xx.xx` first. SSH into that username, then edit its username's `.bashrc` to comment out:
+```
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+```
+to resolve non-interactive SSH connection from pm2.
+
+In the middle of the development, it's possible to use Continuous Integration (CI) or even Continuous Delivery (CD) to automate the build and deployment. Currently mainly using [Snap CI here](https://snap-ci.com/gunadarma-academy/asde-michi-frontend).
+
 *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *
 
 References
 ----------
 
 + http://vuejs.org
++ http://auth0.com/blog/2015/11/13/build-an-app-with-vuejs
 
 *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *
 
