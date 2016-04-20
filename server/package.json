@@ -4,6 +4,12 @@
   "description": "An In memory todo for Logged in and not Logged in users",
   "main": "server.js",
   "scripts": {
+    "start": "npm run start:production",
+    "start:dev": "pm2 start ecosystem.json --watch --env dev",
+    "start:staging": "pm2 start ecosystem.json --watch --env staging",
+    "start:production": "pm2 start ecosystem.json --watch --env production",
+    "start:frontend": "cd frontend && pm2 start ecosystem.json --watch",
+    "stop": "pm2 stop ecosystem.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

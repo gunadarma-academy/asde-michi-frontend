@@ -26,18 +26,18 @@ app.use(function(err, req, res, next) {
   }
 });
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'dev') {
   app.use(logger('dev'));
   app.use(errorhandler())
+  port = process.env.PORT;
 }
 
 app.use(require('./anonymous-routes'));
 app.use(require('./protected-routes'));
 app.use(require('./user-routes'));
 
-var port = process.env.PORT || 3001;
+var port = process.env.PORT || 3000;
 
 http.createServer(app).listen(port, function (err) {
   console.log('listening in http://localhost:' + port);
 });
-
