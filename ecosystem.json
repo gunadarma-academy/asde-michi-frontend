@@ -1,0 +1,70 @@
+{
+  /**
+   * Application configuration section
+   * http://pm2.keymetrics.io/docs/usage/application-declaration
+   * http://pm2.keymetrics.io/docs/usage/specifics
+   */
+  apps: [
+
+    {
+      name: "arlin-frontend",
+      script: "src/",
+      "node_args": "--harmony",
+      "watch": ["src", "assets"],
+      "ignore_watch": ["node_modules"],
+      "watch_options": {
+        "followSymlinks": false
+      },
+      env: {
+        COMMON_VARIABLE: "true"
+      },
+      env_dev: {
+        NODE_ENV: "dev"
+      },
+      env_staging: {
+        NODE_ENV: "staging"
+      },
+      env_production: {
+        NODE_ENV: "production"
+      }
+    }
+
+  ],
+
+  /**
+   * Deployment section
+   * http://pm2.keymetrics.io/docs/usage/deployment
+   */
+  deploy: {
+    dev: {
+      user: "arlin",
+      host: "128.199.216.87",
+      ref: "origin/master",
+      repo: "https://github.com/gunadarma-academy/asde-michi-frontend.git",
+      path: "/home/arlin/app/dev",
+      "post-deploy": "npm install ; pm2 startOrRestart ecosystem.json --env dev",
+      env: {
+        NODE_ENV: "dev"
+      }
+    },
+    staging: {
+      user: "arlin",
+      host: "128.199.216.87",
+      ref: "origin/master",
+      repo: "https://github.com/gunadarma-academy/asde-michi-frontend.git",
+      path: "/home/arlin/app/staging",
+      "post-deploy": "npm install ; pm2 startOrRestart ecosystem.json --env staging",
+      env: {
+        NODE_ENV: "staging"
+      }
+    },
+    production: {
+      user: "arlin",
+      host: "128.199.216.87",
+      ref: "origin/master",
+      repo: "https://github.com/gunadarma-academy/asde-michi-frontend.git",
+      path: "/home/arlin/app/production",
+      "post-deploy": "npm install ; pm2 startOrRestart ecosystem.json --env production"
+    }
+  }
+}
