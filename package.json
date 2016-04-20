@@ -48,6 +48,7 @@
     "bootstrap": "^3.3.5",
     "material-design-lite": "^1.1.3",
     "vue": "^1.0.7",
+    "vue-mdl": "0.7.3",
     "vue-resource": "^0.1.17",
     "vue-router": "^0.7.5"
   },

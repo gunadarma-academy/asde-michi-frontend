@@ -11,9 +11,11 @@ import auth from './auth'
 import env from './environments'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
+import VueMdl from 'vue-mdl'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
+Vue.use(VueMdl)
 
 Vue.config.debug = true
 
