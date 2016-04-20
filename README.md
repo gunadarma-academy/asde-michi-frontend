@@ -32,10 +32,13 @@ Getting Started
 Start the app with `npm start` or use `npm run <script>` for below:
 
 ```
-start: Start the app with configured starter
-dev: Watch the bundled app with Webpack
+start: Start pm2 ecosystem with ES6 and watcher
+start:backend: Start backend app
+stop: Stop pm2 ecosystem
+test: Run jshint and mocha
 build: Build the bundled app with Webpack
-test: Test the app using <test-runner>
+serve: Serve the public index with live-server
+dev: Watch the bundled app with Webpack
 deploy:development:setup: Setup the development
 deploy:development: Deploy to development
 deploy:staging:setup: Setup the staging

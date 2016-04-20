@@ -1,21 +1,30 @@
 {
   "name": "arlin-frontend",
-  "version": "0.2.0",
   "description": "Arlin frontend application by Michi",
+  "version": "0.2.0",
+  "homepage": "http://dev.arlin.link",
   "main": "src/index.js",
   "scripts": {
-    "start": "npm run dev",
+    "start": "npm run build && pm2 start ecosystem.json --watch",
+    "start:backend": "cd backend && pm2 start ecosystem.json --watch",
+    "stop": "pm2 stop ecosystem.json",
+    "push": "git push origin && git push origin --tags",
+    "build": "webpack",
+    "serve": "live-server --port=8000",
     "dev": "webpack-dev-server --inline --hot",
-    "build": "echo 'Bundling will be specified later'",
-    "test": "echo 'Test suite will be specified later'"
-  },
-  "homepage": "http://arlin.link",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://github.com/gunadarma-academy/asde-michi-frontend.git"
-  },
-  "bugs": {
-    "url": "https://github.com/gunadarma-academy/asde-michi-frontend/issues"
+    "test": "echo 'Will be npm start && npm run jshint && npm run mocha -s'",
+    "jshint": "jshint src/. test/. --config",
+    "mocha": "mocha test/. --recursive",
+    "mochawesome": "MOCHAWESOME_REPORTDIR=report mocha test/. --recursive --reporter mochawesome",
+    "release:major": "npm version major && npm run push",
+    "release:minor": "npm version minor && npm run push",
+    "release:patch": "npm version patch && npm run push",
+    "deploy:setup": "pm2 deploy ecosystem.json production setup",
+    "deploy": "pm2 deploy ecosystem.json production",
+    "deploy:staging:setup": "pm2 deploy ecosystem.json staging setup",
+    "deploy:staging": "pm2 deploy ecosystem.json staging",
+    "deploy:dev:setup": "NODE_ENV=dev pm2 deploy ecosystem.json dev setup",
+    "deploy:dev": "NODE_ENV=dev pm2 deploy ecosystem.json dev"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
@@ -40,15 +49,23 @@
     "vue-router": "^0.7.5",
     "vue": "^1.0.7"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/gunadarma-academy/asde-michi-frontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gunadarma-academy/asde-michi-frontend/issues"
+  },
   "author": "Arlin <admin@arlin.link>",
   "contributors": [
     "Ekky Pramana <ekkypramana@gmail.com>",
-    "M Haidar Hanif <me@mhaidarhanif.com>"
+    "M Haidar Hanif <npm@mhaidarhanif.com>"
   ],
   "keywords": [
     "arlin",
     "michi",
     "frontend",
+    "ui",
     "javascript",
     "nodejs",
     "vuejs"
