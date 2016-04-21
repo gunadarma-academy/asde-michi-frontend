@@ -2,7 +2,7 @@
 
  <template>
    <div class="mdl-grid">
-     <div class="box mdl-cell mdl-cell--6-col mdl-cell--3-offset-desktop mdl-card-login mdl-card mdl-shadow--2dp">
+     <div class="box-center mdl-cell mdl-cell--6-col mdl-cell--3-offset-desktop mdl-card-login mdl-card mdl-shadow--2dp">
        <br>
        <img src="/assets/account_logo_dark.svg"/>
        <h3>Sign in</h3>
@@ -40,7 +40,7 @@
  </template>
 
  <style>
-   .box {
+   .box-center {
      margin-top:100px;
      text-align: center;
    }

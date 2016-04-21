@@ -2,7 +2,7 @@
 
 <template>
   <div class="mdl-grid">
-    <div class="box mdl-cell mdl-cell--6-col mdl-cell--3-offset-desktop mdl-card-login mdl-card mdl-shadow--2dp">
+    <div class="box-center mdl-cell mdl-cell--6-col mdl-cell--3-offset-desktop mdl-card-login mdl-card mdl-shadow--2dp">
       <h3>User Data</h3>
       <div>
         <a class="mdl-navigation__link" v-link="'home'" v-if="user.authenticated">{{user.username}}</a>
