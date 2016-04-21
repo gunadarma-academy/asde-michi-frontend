@@ -10,7 +10,7 @@
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation. We hide it in small screens. -->
         <nav class="mdl-navigation mdl-layout--large-screen-only">
-          <a class="mdl-navigation__link" v-link="'home'" v-if="user.authenticated">{{user.username}}</a>
+          <a class="mdl-navigation__link" v-link="'user'" v-if="user.authenticated" v-link="'user'">{{user.username}}</a>
           <a class="mdl-navigation__link" v-link="'landing'" v-if="!user.authenticated">Home</a>
           <a class="mdl-navigation__link" v-link="'signup'" v-if="!user.authenticated">Sign Up</a>
           <a class="mdl-navigation__link" v-link="'signin'" v-if="!user.authenticated">Sign in</a>

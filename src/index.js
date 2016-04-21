@@ -7,6 +7,7 @@ import Landing from './components/Landing.vue'
 import Signup from './components/Signup.vue'
 import Signin from './components/Signin.vue'
 import SecretQuote from './components/SecretQuote.vue'
+import User from './components/User.vue'
 import auth from './auth'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
@@ -34,14 +35,14 @@ router.map({
   '/landing': {
     component: Landing
   },
-  '/secretquote': {
-    component: SecretQuote
-  },
   '/signin': {
     component: Signin
   },
   '/signup': {
     component: Signup
+  },
+  '/user': {
+    component: User
   }
 })
 

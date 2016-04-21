@@ -16,9 +16,6 @@
 </template>
 
 <style>
-  #question-box {
-    min-height: 130px;
-  }
 </style>
 
 <script>

@@ -5,7 +5,7 @@
      <div class="box mdl-cell mdl-cell--6-col mdl-cell--3-offset-desktop mdl-card-login mdl-card mdl-shadow--2dp">
        <br>
        <img src="/assets/account_logo_dark.svg"/>
-       <p>Masuk untuk berinteraksi dengan Teman Arlin.</p>
+       <h3>Sign in</h3>
        <div>
          <form action="#">
            <div class="mdl-textfield mdl-js-textfield">
@@ -77,7 +77,7 @@
        }
        // We need to pass the component's this context
        // to properly make use of http in the auth service
-       auth.signin(this, credentials, 'secretquote')
+       auth.signin(this, credentials, 'user')
      }
    }
 
