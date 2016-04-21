@@ -29,11 +29,11 @@ Vue.http.headers.common['Authorization'] = auth.getAuthHeader();
 
 // Set up routing and match routes to components
 router.map({
+  '/': {
+    component: Landing
+  },
   '/home': {
     component: Home
-  },
-  '/landing': {
-    component: Landing
   },
   '/signin': {
     component: Signin
@@ -48,7 +48,7 @@ router.map({
 
 // Redirect to the home route if any routes are unmatched
 router.redirect({
-  '*': '/landing'
+  '*': '/'
 })
 
 // Start the app on the #app div
