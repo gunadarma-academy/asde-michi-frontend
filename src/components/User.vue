@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       quote: this.$http
-        .get('http://localhost:3001/api/protected/user', (data) => {
+        .get('http://localhost:3030/api/protected/user', (data) => {
           this.user = data;
         }, {
           // Attach the JWT header
