@@ -8,8 +8,8 @@ var app = module.exports = express.Router();
 // XXX: This should be a database of users :).
 var users = [{
   id: 1,
-  username: 'gonto',
-  password: 'gonto'
+  username: 'tamu',
+  password: 'tamu'
 }];
 
 function createToken(user) {
@@ -69,7 +69,7 @@ app.post('/auth/local', function(req, res) {
   var userScheme = getUserScheme(req);
 
   if (!userScheme.username || !req.body.password) {
-    return res.status(400).send("You must send the username and the password");
+    return res.status(400).send("You must fill the username and the password");
   }
 
   var user = _.find(users, userScheme.userSearch);

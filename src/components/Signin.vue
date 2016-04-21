@@ -79,7 +79,13 @@
        // to properly make use of http in the auth service
        auth.signin(this, credentials, 'user')
      }
+   },
+   route: {
+     // Check the users auth status before
+     // disallowing navigation to the route
+     canActivate() {
+       return !auth.user.authenticated
+     }
    }
-
  }
  </script>
