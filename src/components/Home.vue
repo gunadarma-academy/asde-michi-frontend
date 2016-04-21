@@ -1,28 +1,37 @@
 <template>
   <div class="mdl-grid">
     <div class="heading mdl-cell mdl-cell--6-col mdl-cell--3-offset-desktop">
-      <div @click="getQuote()" v-if="quote">
-        <h2><blockquote>{{ quote }}</blockquote></h2>
+      <div>
+        <h2>This user data</h2>
+        <p v-if="user.authenticated">
+          {{ user.username }}
+        </p>
       </div>
+
     </div>
   </div>
 </template>
 
 <script>
+import auth from '../auth'
 export default {
- data() {
-   return {
-     quote: 'The quote here'
-   }
- },
- methods: {
-   getQuote() {
-     this.$http
-       .get('http://localhost:3030/api/random-quote', (data) => {
-         this.quote = data;
-       })
-       .error((err) => console.log(err))
-   }
- }
+  data() {
+    return {
+      user: getUser()
+    }
+  },
+  methods: {
+    getUser() {
+      this.$http
+        .get('http://localhost:3030/api/protected/user', (data) => {
+          this.user = data;
+          console.log(this.user);
+        }, {
+          // Attach the JWT header
+          headers: auth.getAuthHeader()
+        })
+        .error((err) => console.log(err))
+    }
+  }
 }
 </script>

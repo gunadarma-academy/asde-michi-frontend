@@ -1,4 +1,4 @@
-<!-- src/components/SecretQuote.vue -->
+<!-- src/components/User.vue -->
 
 <template>
   <div class="col-sm-6 col-sm-offset-3">
