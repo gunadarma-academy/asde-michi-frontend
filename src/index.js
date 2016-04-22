@@ -7,6 +7,7 @@ import Landing from './components/Landing.vue'
 import Signup from './components/Signup.vue'
 import Signin from './components/Signin.vue'
 import User from './components/User.vue'
+import Ask from './components/Ask.vue'
 import auth from './auth'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
@@ -42,6 +43,9 @@ router.map({
   },
   '/user': {
     component: User
+  },
+  '/ask': {
+    component: Ask
   }
 })
 
