@@ -1,6 +1,6 @@
 <template>
   <div class="mdl-grid">
-    <div class="box-center mdl-cell mdl-cell--6-col mdl-cell--3-offset-desktop mdl-card-login mdl-card mdl-shadow--2dp">
+    <div class="box-center mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop mdl-card-login mdl-card mdl-shadow--2dp">
       <br>
       <h3>Tanya Sekarang</h3>
       <div>
