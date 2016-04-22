@@ -14,7 +14,7 @@
     "build": "webpack",
     "serve": "live-server --port=8000",
     "dev": "webpack-dev-server --inline --hot",
-    "test": "npm run jshint -s && npm run mocha -s",
+    "test": "echo 'npm run jshint -s && npm run mocha -s'",
     "jshint": "jshint src/. test/. --config",
     "mocha": "mocha test/. --recursive",
     "mochawesome": "MOCHAWESOME_REPORTDIR=report mocha test/. --recursive --reporter mochawesome",
