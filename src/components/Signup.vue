@@ -2,10 +2,10 @@
 
  <template>
    <div class="mdl-grid">
-     <div class="box-center mdl-cell mdl-cell--6-col mdl-cell--3-offset-desktop mdl-card-login mdl-card mdl-shadow--2dp">
+     <div class="box-center mdl-cell mdl-cell--4-col mdl-cell--4-offset-desktop mdl-card-login mdl-card mdl-shadow--2dp">
        <br>
        <img src="/assets/account_logo_dark.svg"/>
-       <h3>Sign up for a new account</h3>
+       <h3>Sign up for an Account</h3>
        <div>
          <form action="#">
            <div class="mdl-textfield mdl-js-textfield">

@@ -2,7 +2,7 @@
 
  <template>
    <div class="mdl-grid">
-     <div class="box-center mdl-cell mdl-cell--6-col mdl-cell--3-offset-desktop mdl-card-login mdl-card mdl-shadow--2dp">
+     <div class="box-center mdl-cell mdl-cell--4-col mdl-cell--4-offset-desktop mdl-card-login mdl-card mdl-shadow--2dp">
        <br>
        <img src="/assets/account_logo_dark.svg"/>
        <h3>Sign in</h3>
@@ -40,20 +40,19 @@
  </template>
 
  <style>
-   .box-center {
-     margin-top:100px;
-     text-align: center;
-   }
+ .box-center {
+   margin-top:100px;
+   text-align: center;
+ }
 
-   .mdl-card-login {
-     display: grid;
-   }
+ .mdl-card-login {
+   display: grid;
+ }
 
-   .mdl-button a {
-     color: white;
-   }
-
-   </style>
+ .mdl-button a {
+   color: white;
+ }
+ </style>
 
  <script>
  import auth from '../auth'

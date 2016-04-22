@@ -1,6 +1,6 @@
 <template>
   <div class="mdl-grid">
-    <div class="box-left mdl-cell mdl-cell--6-col mdl-cell--3-offset-desktop mdl-card-login mdl-card mdl-shadow--2dp">
+    <div class="box-left mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop mdl-card-login mdl-card mdl-shadow--2dp">
       <div class="img-header mdl-card__title">
         <h2 class="mdl-card__title-text">Welcome, {{user.username}}!</h2>
       </div>
@@ -16,7 +16,7 @@
   </div>
 
   <div class="mdl-grid">
-    <item class="question-box mdl-cell mdl-cell--6-col mdl-cell--3-offset-desktop mdl-card-login mdl-card mdl-shadow--2dp">
+    <item class="question-box mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop mdl-card-login mdl-card mdl-shadow--2dp">
       <div class="box-margin mdl-supporting-text">
         <a class="mdl-navigation__link" v-link="'#'"><h5>{this.question}<span class="mdl-badge" data-badge="12"></span></h5></a>
       </div>
