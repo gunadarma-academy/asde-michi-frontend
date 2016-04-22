@@ -8,7 +8,7 @@
 
     {
       name: "arlin-frontend",
-      script: "src/",
+      script: "public",
       "node_args": "--harmony",
       "watch": ["src", "assets"],
       "ignore_watch": ["node_modules"],
