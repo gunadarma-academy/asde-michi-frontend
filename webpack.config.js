@@ -8,8 +8,8 @@ module.exports = {
   ],
   // output configuration
   output: {
-    path: __dirname + '/dist/',
-    publicPath: 'dist/',
+    path: __dirname + '/public/',
+    publicPath: 'public/',
     filename: 'bundle.js'
   },
   // module
