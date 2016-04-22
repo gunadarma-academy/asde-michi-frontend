@@ -29,7 +29,7 @@
 </template>
 
 <style>
-#question-box {
+.question-box {
   min-height: 100px;
 }
 .box-margin {
