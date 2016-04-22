@@ -20,6 +20,7 @@ export default {
     context.$http.post(SIGNIN_URL, creds, (data) => {
       localStorage.setItem('id_token', data.id_token)
       this.user.authenticated = true
+      this.user.username = creds.username
 
       // Redirect to a specified route
       if(redirect) {
