@@ -17,6 +17,7 @@
     "trailing": true,
     "smarttabs": true,
     "white": false,
+    "semicolon": false,
     "globals": {
         "it": true,
         "describe": true,
