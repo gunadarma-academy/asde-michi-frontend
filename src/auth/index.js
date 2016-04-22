@@ -19,11 +19,7 @@ export default {
   signin(context, creds, redirect) {
     context.$http.post(SIGNIN_URL, creds, (data) => {
       localStorage.setItem('id_token', data.id_token)
-
       this.user.authenticated = true
-      this.user.username = creds.username
-
-      console.log(this.user.username)
 
       // Redirect to a specified route
       if(redirect) {
@@ -38,8 +34,7 @@ export default {
   signup(context, creds, redirect) {
     context.$http.post(SIGNUP_URL, creds, (data) => {
       localStorage.setItem('id_token', data.id_token)
-
-      this.user.authenticated = true
+      this.user.authenticated = false
 
       if(redirect) {
         router.go(redirect)
